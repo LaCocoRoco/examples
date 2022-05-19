@@ -1,0 +1,6 @@
+braintree:
+  merchantId: merchantId
+  publicKey: publicKey
+  privateKey: privateKey
+google:
+  merchantId: merchantId

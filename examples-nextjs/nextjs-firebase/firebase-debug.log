@@ -1,0 +1,109 @@
+[debug] [2022-05-19T06:37:03.696Z] ----------------------------------------------------------------------
+[debug] [2022-05-19T06:37:03.697Z] Command:       /home/andreas/.nvm/versions/node/v16.15.0/bin/node /home/andreas/.nvm/versions/node/v16.15.0/bin/firebase deploy --only functions,hosting
+[debug] [2022-05-19T06:37:03.698Z] CLI Version:   10.9.2
+[debug] [2022-05-19T06:37:03.698Z] Platform:      linux
+[debug] [2022-05-19T06:37:03.698Z] Node Version:  v16.15.0
+[debug] [2022-05-19T06:37:03.698Z] Time:          Thu May 19 2022 06:37:03 GMT+0000 (Coordinated Universal Time)
+[debug] [2022-05-19T06:37:03.698Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-05-19T06:37:03.743Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-05-19T06:37:03.744Z] > authorizing via signed-in user (andreas.deiring@gmail.com)
+[debug] [2022-05-19T06:37:03.744Z] [iam] checking project deiring for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-05-19T06:37:03.746Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/deiring:testIamPermissions [none]
+[debug] [2022-05-19T06:37:03.746Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/deiring:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-05-19T06:37:03.941Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/deiring:testIamPermissions 200
+[debug] [2022-05-19T06:37:03.941Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/deiring:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-05-19T06:37:03.942Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/deiring/serviceAccounts/deiring@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2022-05-19T06:37:03.942Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/deiring/serviceAccounts/deiring@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-05-19T06:37:04.098Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/deiring/serviceAccounts/deiring@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2022-05-19T06:37:04.098Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/deiring/serviceAccounts/deiring@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-05-19T06:37:04.100Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/deiring [none]
+[debug] [2022-05-19T06:37:04.283Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/deiring 200
+[debug] [2022-05-19T06:37:04.283Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/deiring {"projectId":"deiring","projectNumber":"193994436416","displayName":"deiring","name":"projects/deiring","resources":{"hostingSite":"deiring","realtimeDatabaseInstance":"deiring-default-rtdb","storageBucket":"deiring.appspot.com","locationId":"europe-west"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'deiring'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2022-05-19T06:37:04.288Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/deiring [none]
+[debug] [2022-05-19T06:37:04.469Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/deiring 200
+[debug] [2022-05-19T06:37:04.470Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/deiring {"projectId":"deiring","projectNumber":"193994436416","displayName":"deiring","name":"projects/deiring","resources":{"hostingSite":"deiring","realtimeDatabaseInstance":"deiring-default-rtdb","storageBucket":"deiring.appspot.com","locationId":"europe-west"},"state":"ACTIVE"}
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2022-05-19T06:37:04.472Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/deiring/services/cloudfunctions.googleapis.com [none]
+[debug] [2022-05-19T06:37:04.474Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/deiring/services/runtimeconfig.googleapis.com [none]
+[debug] [2022-05-19T06:37:04.475Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/deiring/services/cloudbuild.googleapis.com [none]
+[debug] [2022-05-19T06:37:04.476Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/deiring/services/artifactregistry.googleapis.com [none]
+[debug] [2022-05-19T06:37:05.295Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/deiring/services/runtimeconfig.googleapis.com 200
+[debug] [2022-05-19T06:37:05.295Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/deiring/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2022-05-19T06:37:05.311Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/deiring/services/cloudbuild.googleapis.com 200
+[debug] [2022-05-19T06:37:05.311Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/deiring/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2022-05-19T06:37:05.312Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/deiring/services/cloudfunctions.googleapis.com 200
+[debug] [2022-05-19T06:37:05.313Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/deiring/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2022-05-19T06:37:05.339Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/deiring/services/artifactregistry.googleapis.com 200
+[debug] [2022-05-19T06:37:05.339Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/deiring/services/artifactregistry.googleapis.com [omitted]
+[debug] [2022-05-19T06:37:05.340Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/deiring/adminSdkConfig [none]
+[debug] [2022-05-19T06:37:05.562Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/deiring/adminSdkConfig 200
+[debug] [2022-05-19T06:37:05.562Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/deiring/adminSdkConfig {"projectId":"deiring","databaseURL":"https://deiring-default-rtdb.europe-west1.firebasedatabase.app","storageBucket":"deiring.appspot.com","locationId":"europe-west"}
+[debug] [2022-05-19T06:37:05.563Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/deiring/configs [none]
+[debug] [2022-05-19T06:37:05.901Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/deiring/configs 200
+[debug] [2022-05-19T06:37:05.901Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/deiring/configs {}
+[info] i  functions: preparing codebase default for deployment 
+[debug] [2022-05-19T06:37:05.902Z] Validating nodejs source
+[debug] [2022-05-19T06:37:06.989Z] > [functions] package.json contents: {
+  "name": "nextjs-firebase",
+  "version": "0.1.0",
+  "private": true,
+  "main": ".functions/index.js",
+  "scripts": {
+    "next:dev": "next dev",
+    "next:build": "next build",
+    "next:start": "next start",
+    "next:lint": "next lint",
+    "functions:lint": "eslint -c functions/.eslintrc.json functions",
+    "functions:build": "rimraf .functions && tsc --p functions/tsconfig.json",
+    "deploy": "firebase deploy --only functions,hosting"
+  },
+  "dependencies": {
+    "firebase-admin": "^10.2.0",
+    "firebase-functions": "^3.21.2",
+    "firebase-functions-test": "^2.0.2",
+    "next": "12.1.6",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "sass": "^1.51.0"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.34",
+    "@types/react": "18.0.9",
+    "@types/react-dom": "18.0.4",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "eslint": "8.15.0",
+    "eslint-config-next": "12.1.6",
+    "eslint-config-prettier": "^8.5.0",
+    "rimraf": "^3.0.2",
+    "typescript": "4.6.4"
+  }
+}
+[debug] [2022-05-19T06:37:06.989Z] Building nodejs source
+[debug] [2022-05-19T06:37:06.990Z] Analyzing nodejs backend spec
+[debug] [2022-05-19T06:37:06.991Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-05-19T06:37:07.095Z] Serving at port 9005
+
+[debug] [2022-05-19T06:37:07.161Z] Got response from /__/functions.yaml {"endpoints":{"server":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"server"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-05-19T06:37:07.171Z] shutdown requested via /__/quitquitquit
+
+[info] i  functions: preparing . directory for uploading... 
+[info] i  functions: packaged /home/andreas/workspace/examples/examples-nextjs/nextjs-firebase (19.37 MB) for uploading 
+[debug] [2022-05-19T06:37:08.480Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/deiring/locations/-/functions [none]
+[debug] [2022-05-19T06:37:08.937Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/deiring/locations/-/functions 200
+[debug] [2022-05-19T06:37:08.937Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/deiring/locations/-/functions {"functions":[{"name":"projects/deiring/locations/us-central1/functions/server","httpsTrigger":{"url":"https://us-central1-deiring.cloudfunctions.net/server","securityLevel":"SECURE_ALWAYS"},"status":"ACTIVE","entryPoint":"server","timeout":"60s","availableMemoryMb":256,"serviceAccountEmail":"deiring@appspot.gserviceaccount.com","updateTime":"2022-05-19T06:28:24.944Z","versionId":"1","labels":{"deployment-tool":"cli-firebase"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-1070783733234.us-central1.cloudfunctions.appspot.com/ab1d531e-6ab8-4a68-8d5f-04507ea1b37a.zip","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"deiring\",\"databaseURL\":\"https://deiring-default-rtdb.europe-west1.firebasedatabase.app\",\"storageBucket\":\"deiring.appspot.com\",\"locationId\":\"europe-west\"}","GCLOUD_PROJECT":"deiring"},"runtime":"nodejs16","ingressSettings":"ALLOW_ALL","buildId":"a49810ec-e73e-4436-a680-3653bdd75515","buildName":"projects/193994436416/locations/us-central1/builds/a49810ec-e73e-4436-a680-3653bdd75515","dockerRegistry":"CONTAINER_REGISTRY"}]}
+[debug] [2022-05-19T06:37:08.938Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2alpha/projects/deiring/locations/-/functions [none]
+[debug] [2022-05-19T06:37:09.964Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2alpha/projects/deiring/locations/-/functions 200
+[debug] [2022-05-19T06:37:09.964Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2alpha/projects/deiring/locations/-/functions {}
+[debug] [2022-05-19T06:37:09.970Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/deiring [none]
+[debug] [2022-05-19T06:37:10.164Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/deiring 200
+[debug] [2022-05-19T06:37:10.164Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/deiring {"projectId":"deiring","projectNumber":"193994436416","displayName":"deiring","name":"projects/deiring","resources":{"hostingSite":"deiring","realtimeDatabaseInstance":"deiring-default-rtdb","storageBucket":"deiring.appspot.com","locationId":"europe-west"},"state":"ACTIVE"}
+[debug] [2022-05-19T06:37:10.166Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/193994436416/sites/deiring/versions [none]
+[debug] [2022-05-19T06:37:10.166Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/193994436416/sites/deiring/versions {"config":{"rewrites":[{"glob":"**","function":"server","functionRegion":"us-central1"}]},"labels":{"deployment-tool":"cli-firebase"}}

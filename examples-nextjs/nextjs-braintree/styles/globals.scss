@@ -1,0 +1,35 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment {
+  transform: translate(0);
+}
+
+.container {
+  z-index: 1;
+  display: none;
+  position: fixed;
+  background: white;
+  transform: translate(0, -50%);
+}
+
+.input-group-text{
+  height: 50px;
+}
+
+.btn {
+  width: 100%;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}

@@ -1,0 +1,9 @@
+firebase:
+  apiKey: apiKey
+  appId: appId
+  projectId: projectId
+  authDomain: authDomain
+  databaseURL: databaseURL
+  storageBucket: storageBucket
+  messagingSenderId: messagingSenderId
+  measurementId: measurementId

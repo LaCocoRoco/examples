@@ -1,0 +1,23 @@
+postgres:
+  host: localhost
+  port: 5432
+  username: username
+  password: password
+  database: database
+  schema: public
+  synchronize: true
+authenticate:
+  jwt:
+    secret: secret
+  google:
+    clientID: clientID
+    clientSecret: clientSecret
+    callbackURL: callbackURL
+  facebook:
+    clientID: clientID
+    clientSecret: clientSecret
+    callbackURL: callbackURL
+  github:
+    clientID: clientID
+    clientSecret: clientSecret
+    callbackURL: callbackURL

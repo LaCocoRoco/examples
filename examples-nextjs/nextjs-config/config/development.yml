@@ -1,0 +1,9 @@
+firebase:
+  apiKey: "AIza...."
+  appId: "1:27992087142:web:ce...."
+  projectId: "my-firebase-project"
+  authDomain: "YOUR_APP.firebaseapp.com"
+  databaseURL: "https://YOUR_APP.firebaseio.com"
+  storageBucket: "YOUR_APP.appspot.com"
+  messagingSenderId: "123456789"
+  measurementId: "G-12345"

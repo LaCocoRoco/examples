@@ -1,0 +1,16 @@
+{
+  "functions": {
+    "source": ".",
+    "runtime": "nodejs16"
+  },
+  "hosting": {
+    "site": "deiring",
+    "public": "public",
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "server"
+      }
+    ]
+  }
+}

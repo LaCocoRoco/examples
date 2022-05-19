@@ -1,0 +1,14 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": ["prettier"],
+  "plugins": ["@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
+  "overrides": [{ "files": ["*.ts"] }],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  }
+}

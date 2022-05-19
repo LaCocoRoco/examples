@@ -1,0 +1,27 @@
+server:
+  port: 3000
+postgres:
+  host: localhost
+  port: 5432
+  username: postgres
+  password: postgres
+  database: postgres
+  schema: public
+  synchronize: false
+logger:
+  level: debug
+authenticate:
+  jwt:
+    secret: secret
+  google:
+    clientID: clientID
+    clientSecret: clientSecret
+    callbackURL: callbackURL
+  facebook:
+    clientID: clientID
+    clientSecret: clientSecret
+    callbackURL: callbackURL
+  github:
+    clientID: clientID
+    clientSecret: clientSecret
+    callbackURL: callbackURL

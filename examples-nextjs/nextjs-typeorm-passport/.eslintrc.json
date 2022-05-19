@@ -1,0 +1,16 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": ["prettier", "next"],
+  "plugins": ["@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "rules": {
+    "@next/next/no-html-link-for-pages": 0
+  }
+}
