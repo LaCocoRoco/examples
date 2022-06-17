@@ -1,0 +1,12 @@
+[
+  {
+    "_id": "b55e2dca-aae7-42a0-be4a-90f2c869e4f8",
+    "name": "env",
+    "default": true,
+    "sortNum": 10000,
+    "created": "2022-04-09T16:09:40.016Z",
+    "modified": "2022-04-10T07:35:15.487Z",
+    "data": [],
+    "envFile": "../../.env.development"
+  }
+]
